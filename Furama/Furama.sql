@@ -41,14 +41,14 @@ CREATE TABLE nhan_vien (
 
 
 CREATE TABLE loai_khach (
-    ma_loai_khach INT NOT NULL AUTO_INCREMENT,
+    ma_loai_khach INT AUTO_INCREMENT,
     ten_loai_khach VARCHAR(45) NOT NULL,
     PRIMARY KEY (ma_loai_khach)
 );
 
 
 CREATE TABLE khach_hang (
-    ma_khach_hang INT NOT NULL AUTO_INCREMENT,
+    ma_khach_hang INT AUTO_INCREMENT,
     ho_ten VARCHAR(45) NOT NULL,
     ngay_sinh DATE NOT NULL,
     gioi_tinh BIT NOT NULL,
@@ -65,21 +65,21 @@ CREATE TABLE khach_hang (
 
 
 CREATE TABLE loai_dich_vu (
-    ma_loai_dich_vu INT NOT NULL AUTO_INCREMENT,
+    ma_loai_dich_vu INT AUTO_INCREMENT,
     ten_loai_dich_vu VARCHAR(45) NOT NULL,
     PRIMARY KEY (ma_loai_dich_vu)
 );
 
 
 CREATE TABLE kieu_thue (
-    ma_kieu_thue INT NOT NULL AUTO_INCREMENT,
+    ma_kieu_thue INT AUTO_INCREMENT,
     ten_kieu_thue VARCHAR(45) NOT NULL,
     PRIMARY KEY (ma_kieu_thue)
 );
 
 
 CREATE TABLE dich_vu (
-    ma_dich_vu INT NOT NULL AUTO_INCREMENT,
+    ma_dich_vu INT AUTO_INCREMENT,
     ten_dich_vu VARCHAR(45) NOT NULL,
     dien_tich INT,
     chi_phi_thue double NOT NULL,
@@ -101,7 +101,7 @@ CREATE TABLE dich_vu (
 
 
 CREATE TABLE hop_dong (
-    ma_hop_dong INT AUTO_INCREMENT NOT NULL,
+    ma_hop_dong INT AUTO_INCREMENT,
     ngay_lam_hop_dong DATETIME NOT NULL,
     ngay_ket_thuc DATETIME NOT NULL,
     tien_dat_coc DOUBLE NOT NULL,
@@ -118,7 +118,7 @@ CREATE TABLE hop_dong (
 );
 
 CREATE TABLE dich_vu_di_kem (
-    ma_dich_vu_di_kem INT AUTO_INCREMENT NOT NULL,
+    ma_dich_vu_di_kem INT AUTO_INCREMENT,
     ten_dich_vu_di_kem VARCHAR(45) NOT NULL,
     gia DOUBLE NOT NULL,
     don_vi VARCHAR(45) NOT NULL,
@@ -128,7 +128,7 @@ CREATE TABLE dich_vu_di_kem (
 
 
 CREATE TABLE hop_dong_chi_tiet (
-    ma_hop_dong_chi_tiet INT AUTO_INCREMENT NOT NULL,
+    ma_hop_dong_chi_tiet INT AUTO_INCREMENT,
      so_luong INT NOT NULL,
     ma_hop_dong INT NOT NULL,
     ma_dich_vu_di_kem INT NOT NULL,
