@@ -39,13 +39,11 @@ CREATE TABLE nhan_vien (
         REFERENCES bo_phan (ma_bo_phan)
 );
 
-
 CREATE TABLE loai_khach (
     ma_loai_khach INT AUTO_INCREMENT,
     ten_loai_khach VARCHAR(45) NOT NULL,
     PRIMARY KEY (ma_loai_khach)
 );
-
 
 CREATE TABLE khach_hang (
     ma_khach_hang INT AUTO_INCREMENT,
@@ -62,14 +60,11 @@ CREATE TABLE khach_hang (
         REFERENCES loai_khach (ma_loai_khach)
 );
 
-
-
 CREATE TABLE loai_dich_vu (
     ma_loai_dich_vu INT AUTO_INCREMENT,
     ten_loai_dich_vu VARCHAR(45) NOT NULL,
     PRIMARY KEY (ma_loai_dich_vu)
 );
-
 
 CREATE TABLE kieu_thue (
     ma_kieu_thue INT AUTO_INCREMENT,
@@ -77,19 +72,18 @@ CREATE TABLE kieu_thue (
     PRIMARY KEY (ma_kieu_thue)
 );
 
-
 CREATE TABLE dich_vu (
     ma_dich_vu INT AUTO_INCREMENT,
     ten_dich_vu VARCHAR(45) NOT NULL,
     dien_tich INT,
-    chi_phi_thue double NOT NULL,
+    chi_phi_thue DOUBLE NOT NULL,
     so_nguoi_toi_da INT,
     tieu_chuan_phong VARCHAR(45),
     mo_ta_tien_nghi_khac VARCHAR(45),
-    dien_tich_ho_boi int,
+    dien_tich_ho_boi INT,
     so_tang INT,
     dich_vu_mien_phi_di_kem TEXT,
-     ma_kieu_thue INT,
+    ma_kieu_thue INT,
     ma_loai_dich_vu INT,
     PRIMARY KEY (ma_dich_vu),
     FOREIGN KEY (ma_loai_dich_vu)
@@ -97,8 +91,6 @@ CREATE TABLE dich_vu (
     FOREIGN KEY (ma_kieu_thue)
         REFERENCES kieu_thue (ma_kieu_thue)
 );
-
-
 
 CREATE TABLE hop_dong (
     ma_hop_dong INT AUTO_INCREMENT,
@@ -126,10 +118,9 @@ CREATE TABLE dich_vu_di_kem (
     PRIMARY KEY (ma_dich_vu_di_kem)
 );
 
-
 CREATE TABLE hop_dong_chi_tiet (
     ma_hop_dong_chi_tiet INT AUTO_INCREMENT,
-     so_luong INT NOT NULL,
+    so_luong INT NOT NULL,
     ma_hop_dong INT NOT NULL,
     ma_dich_vu_di_kem INT NOT NULL,
     PRIMARY KEY (ma_hop_dong_chi_tiet),
@@ -138,4 +129,3 @@ CREATE TABLE hop_dong_chi_tiet (
     FOREIGN KEY (ma_dich_vu_di_kem)
         REFERENCES dich_vu_di_kem (ma_dich_vu_di_kem)
 );
-
