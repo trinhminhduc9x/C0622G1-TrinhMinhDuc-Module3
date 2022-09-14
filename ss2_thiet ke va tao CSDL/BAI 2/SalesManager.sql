@@ -2,34 +2,34 @@ DROP DATABASE IF EXISTS SalesManager;
 create database SalesManager;
 use SalesManager;
 
-create table customer(
-cID int primary key auto_increment not null,
-cName varchar(45),
-cAge int
+CREATE TABLE customer (
+    cID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    cName VARCHAR(45),
+    cAge INT
 );
 
-create table ordera(
-oID int primary key auto_increment not null,
-oDate  date,
-oTotal int,
-cID int,
- FOREIGN KEY (cID)
+CREATE TABLE ordera (
+    oID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    oDate DATE,
+    oTotal INT,
+    cID INT,
+    FOREIGN KEY (cID)
         REFERENCES customer (cID)
 );
 
 
-create table product(
-pID int primary key auto_increment not null,
-pName varchar(45),
-pPrice int
+CREATE TABLE product (
+    pID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    pName VARCHAR(45),
+    pPrice INT
 );
 
-create table orderDetail(
-oID int ,
-pID int ,
-odQTY int,
- FOREIGN KEY (oID)
+CREATE TABLE orderDetail (
+    oID INT,
+    pID INT,
+    odQTY INT,
+    FOREIGN KEY (oID)
         REFERENCES ordera (oID),
- FOREIGN KEY (pID)
+    FOREIGN KEY (pID)
         REFERENCES product (pID)
 );
