@@ -16,7 +16,7 @@ SELECT
 FROM
     Subject s
         JOIN
-    Mark m ON m.MarkId = s.SubId
+    Mark m ON m.SubId = s.SubId
 WHERE
     m.mark = (
     SELECT 
