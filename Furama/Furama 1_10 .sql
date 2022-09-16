@@ -199,8 +199,10 @@ WHERE
 GROUP BY dv.ten_dich_vu
 ORDER BY dv.dien_tich DESC;
 
-/*7.	Hiển thị thông tin ma_dich_vu, ten_dich_vu, dien_tich, so_nguoi_toi_da, chi_phi_thue, ten_loai_dich_vu của tất cả các loại dịch 
-vụ đã từng được khách hàng đặt phòng trong năm 2020 nhưng chưa từng được khách hàng đặt phòng trong năm 2021.*/
+/*7.	Hiển thị thông tin ma_dich_vu, ten_dich_vu, dien_tich, so_nguoi_toi_da, chi_phi_thue, ten_loai_dich_vu 
+của tất cả các loại dịch 
+vụ đã từng được khách hàng đặt phòng trong năm 2020 
+nhưng chưa từng được khách hàng đặt phòng trong năm 2021.*/
 
 -- c1
 
@@ -214,7 +216,8 @@ SELECT
     bang1.ngay_lam_hop_dong,
     bang1.ma_hop_dong
 FROM
-    (SELECT 
+    (
+    SELECT 
         dv.ma_dich_vu,
             dv.ten_dich_vu,
             dv.dien_tich,
@@ -229,7 +232,8 @@ FROM
     JOIN loai_dich_vu ldv ON dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
     WHERE
         (hd.ngay_lam_hop_dong BETWEEN '2020-01-01 00:00:00' AND '2020-12-31  23:59:59')
-    GROUP BY dv.ten_dich_vu) AS bang1
+    GROUP BY dv.ten_dich_vu
+    ) AS bang1
         LEFT JOIN
     (SELECT 
         dv.ma_dich_vu,
@@ -249,8 +253,7 @@ FROM
     GROUP BY dv.ten_dich_vu) AS bang2 ON bang1.ten_dich_vu = bang2.ten_dich_vu
 WHERE
     bang2.ten_dich_vu IS NULL;
-    
-    
+
 -- c2
 
 SELECT 
