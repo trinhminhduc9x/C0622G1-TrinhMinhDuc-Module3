@@ -48,8 +48,8 @@ FROM products
 WHERE products.product_name = 'bac' AND products.product_price = 60;
     
 -- Bước 4: Tạo view lấy về các thông tin: productCode, productName, productPrice, productStatus từ bảng products.
--- Tiến hành sửa đổi view
--- Tiến hành xoá view
+
+
 
 CREATE VIEW product_view AS
 SELECT 
@@ -58,11 +58,11 @@ SELECT
 	product_price,
 	product_status
 FROM products;
-
+-- Tiến hành sửa đổi view
 SELECT
 * 
 FROM product_view;
-
+-- Tiến hành xoá view
 CREATE OR REPLACE VIEW product_view AS
 SELECT 
 	product_code,
