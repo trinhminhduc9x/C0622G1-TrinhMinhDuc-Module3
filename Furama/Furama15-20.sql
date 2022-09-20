@@ -3,7 +3,8 @@ USE Furama;
 SET sql_safe_updates = 0;
 DELETE FROM nhan_vien 
 WHERE
-    nhan_vien.ma_nhan_vien NOT IN (
+    nhan_vien.ma_nhan_vien 
+    NOT IN (
     SELECT 
         nhan_vien_new.ma_nhan_vien
     FROM
@@ -42,7 +43,7 @@ FROM
         LEFT JOIN
     dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 WHERE lk.ten_loai_khach ='Platinium' 
-		AND YEAR(hd.ngay_lam_hop_dong) = '2021'
+AND YEAR(hd.ngay_lam_hop_dong) = '2021'
 GROUP BY k.ma_loai_khach
 HAVING SUM((IFNULL(hdct.so_luong * dvdk.gia, 0)) + chi_phi_thue) > 1000000;
 
@@ -119,7 +120,6 @@ WHERE
 SET sql_safe_updates =1;
 
 
-
 -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 -- xac dinh dich vu dk duoc su xung tren 10 lan
 
@@ -135,7 +135,7 @@ FROM
         JOIN
     dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 WHERE
-    YEAR(hd.ngay_lam_hop_dong) = '2020'
+YEAR(hd.ngay_lam_hop_dong) = '2020'
 GROUP BY dvdk.ma_dich_vu_di_kem
 HAVING tong_so > 10
 ;
@@ -148,7 +148,8 @@ UPDATE dich_vu_di_kem
 SET 
     gia = gia * 2
 WHERE
-    ma_dich_vu_di_kem IN (SELECT 
+    ma_dich_vu_di_kem IN (
+    SELECT 
             ma_dich_vu_di_kem
         FROM
             hop_dong hd
@@ -156,7 +157,8 @@ WHERE
             hop_dong_chi_tiet hdct ON hdct.ma_hop_dong = hd.ma_hop_dong
                 AND YEAR(ngay_lam_hop_dong) = '2020'
         GROUP BY ma_dich_vu_di_kem
-        HAVING SUM(so_luong) > 10);
+        HAVING SUM(so_luong) > 10
+        );
 SET sql_safe_updates =1;
 
 
