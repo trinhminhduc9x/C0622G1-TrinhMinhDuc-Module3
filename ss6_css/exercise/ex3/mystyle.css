@@ -2,7 +2,15 @@ body {
     font: 100% Lucida Sans, Verdana;
     margin: 20px;
     line-height: 26px;
-    background-image:url(https://lh6.googleusercontent.com/ZLUJqSJHL_S1LyZ73LnuansHWWBKjN7UJnuiTORFgB880pqdsd9D_2Fh8OTEdTBdUMpHdhmZ6Gy-8mL76MJOiLGimq7bjWCd-iVpGplbW4ULVI5BCJxHv4fstrJ9ZknWqO-yT8ai);
+    background-image:
+            /*linear-gradient(0,rgba(255,255,0,0.5),rgba(0,0,225,0)),*/
+            url(https://pdp.edu.vn/wp-content/uploads/2021/06/hinh-anh-naruto-chat-ngau-dep-820x600.jpg);
+    background-size: cover;
+    border:20px darkblue;
+    padding: 10px;
+    box-sizing:border-box;
+    background-origin: padding-box;
+    background-position: center;
 }
 
 .container {
@@ -36,7 +44,7 @@ body {
 }
 
 #sidebar {
-    background-image:url("https://i.pinimg.com/236x/e1/01/81/e10181c9f1cb1980aa1e7fe1dc3bc2b4.jpg");
+    background-image: url("https://i.pinimg.com/236x/e1/01/81/e10181c9f1cb1980aa1e7fe1dc3bc2b4.jpg");
     color: #ffffff;
     padding: 10px;
     width: 180px;
@@ -47,6 +55,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    background-position: center;
 }
 
 #bottom {
@@ -89,7 +98,6 @@ a {
 a:hover {
     text-decoration: none;
 }
-
 
 @media (max-width: 800px) {
     #sidebar {
