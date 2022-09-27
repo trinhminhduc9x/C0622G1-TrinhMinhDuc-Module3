@@ -3,8 +3,8 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ProductDiscountServlet", value = "/productDiscount")
-public class ProductDiscountServlet extends HttpServlet {
+@WebServlet(name = "productDiscountServlet", value = "/display-discount")
+public class ProductDiscountCalculatorAppServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
