@@ -8,16 +8,33 @@ import service.IProductService;
 import java.util.List;
 
 public class ProductService implements IProductService {
-    private IProductRepository studentRepository = new ProductRepository();
+    IProductRepository ProductRepository = new ProductRepository();
     @Override
     public List<Product> findAll() {
-        return studentRepository.findAll();
+        return  ProductRepository.findAll();
+    }
+
+    @Override
+    public void add(Product product) {
+        ProductRepository.add(product);
     }
 
     @Override
     public Product findById(int id) {
-        return null;
+
+        return ProductRepository.findById(id);
     }
+
+    @Override
+    public void update(int id,Product product) {
+        ProductRepository.update(id,product);
+    }
+
+    @Override
+    public void delete(int id) {
+        ProductRepository.delete(id);
+    }
+
 
     @Override
     public Product productDetail(int id) {
@@ -25,24 +42,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void add(Product product) {
-        // validae dữ liệu
-        // lưu và db
-         studentRepository.add(product);
-    }
-
-    @Override
-    public void update(int id, Product product) {
-
-    }
-
-    @Override
-    public void delete(int id) {
-
-    }
-
-    @Override
     public List<Product> searchByName(String name) {
-        return null;
+        return ProductRepository.searchByName(name);
     }
 }
