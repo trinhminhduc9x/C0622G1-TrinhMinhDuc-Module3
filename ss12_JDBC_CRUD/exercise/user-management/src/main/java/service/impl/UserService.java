@@ -45,6 +45,11 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public List<User> sortById() {
+        return userRepository.sortByID();
+    }
+
+    @Override
     public User getUserById(int id) {
         return  userRepository.getUserById(id);
     }

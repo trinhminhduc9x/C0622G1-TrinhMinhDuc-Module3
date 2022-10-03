@@ -8,6 +8,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns ={"","/User"})
@@ -29,8 +30,11 @@ public class UserServlet extends HttpServlet {
             case "delete":
                 deleteUsers(request,response);
                 break;
-            case "sort":
+            case "sortName":
                 sortUser(request,response);
+                break;
+            case "sortId":
+                sortUserId(request,response);
                 break;
             case "permision":
                 addUserPermision(request,response);
@@ -67,7 +71,8 @@ public class UserServlet extends HttpServlet {
 //                showDeleteUser(request,response);
 //                break;
             case "search":
-                searchUser(request,response);
+  //              searchUser(request,response);
+                searchId(request,response);
             default:
                 showListUser(request, response);
         }
@@ -208,6 +213,35 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+    private void searchId(HttpServletRequest request, HttpServletResponse response) {
+        String id = request.getParameter("id");
+        List<User>userList= new ArrayList<>();
+        userList.add(userService.findById(Integer.parseInt(id)));
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/list.jsp");
+        if (userList.isEmpty()){
+            request.setAttribute("message","Not found");
+        } else {
+            request.setAttribute("userList",userList);
+        }
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void sortUserId(HttpServletRequest request, HttpServletResponse response) {
+        List<User>userList=userService.sortById();
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/list.jsp");
+        request.setAttribute("userList",userList);
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-
+    }
 }

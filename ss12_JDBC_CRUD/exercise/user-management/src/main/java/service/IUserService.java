@@ -12,6 +12,7 @@ public interface IUserService {
     User findById(int id);
     List<User>seachByCountry(String coutry);
     List<User>sortByName();
+    List<User>sortById();
     User getUserById(int id);
     void insertUserStore(User user);
     void  addUserTransaction(User user,int[] permision);

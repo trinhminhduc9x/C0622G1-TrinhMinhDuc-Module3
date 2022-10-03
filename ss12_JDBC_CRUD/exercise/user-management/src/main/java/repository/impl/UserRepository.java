@@ -20,6 +20,7 @@ public class UserRepository implements IUserRepository {
     private final String UPDATE_BY_ID = " update users set name = ?,email = ?,country = ? where id = ?";
     private final String SEARCH_BY_COUNTRY = "select * from users where country like ?";
     private final String SORT_NAME = "select * from users order by name";
+    private final String SORT_Id = "select * from users order by id";
     private static final String SQL_INSERT = "INSERT INTO EMPLOYEE (NAME, SALARY, CREATED_DATE) VALUES (?,?,?)";
     private static final String SQL_UPDATE = "UPDATE EMPLOYEE SET SALARY=? WHERE NAME=?";
     private static final String SQL_TABLE_CREATE = "CREATE TABLE EMPLOYEE"
@@ -152,6 +153,27 @@ public class UserRepository implements IUserRepository {
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SORT_NAME);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country = resultSet.getString("country");
+                User user = new User(id, name, email, country);
+                userList.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userList;
+    }
+
+    @Override
+    public List<User> sortByID() {
+        List<User> userList = new ArrayList<>();
+        Connection connection = BaseRepository.getConnectDB();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SORT_Id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
