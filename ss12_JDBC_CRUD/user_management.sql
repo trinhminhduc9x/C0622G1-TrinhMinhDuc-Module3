@@ -11,6 +11,14 @@ country varchar(120) not null
 
 insert into users (name,email,country) 
 values ('Minh','minh@codegym.vn','Viet Nam'),
+		('Minh1','minh@codegym.vn','Viet Nam'),
+		('Minh2','minh@codegym.vn','Viet Nam'),
+		('Minh3','minh@codegym.vn','Viet Nam'),
+		('Minh4','minh@codegym.vn','Viet Nam'),
+		('Minh5','minh@codegym.vn','Viet Nam'),
+		('Minh6','minh@codegym.vn','Viet Nam'),
+		('Minh7','minh@codegym.vn','Viet Nam'),
+		('Minh8','minh@codegym.vn','Viet Nam'),
 	   ('Kante','kante@che.uk','Kenia');
 	
 delimiter $$
@@ -36,7 +44,7 @@ create procedure insert_user (
      end $$
      delimiter ;
      
-     call insert_user('Bon','thaonhien9991@gmail.com','Viet Nam');
+     call insert_user('Bon','9991@gmail.com','Viet Nam');
      
      create table permision (
      id int(11) primary key,
@@ -56,3 +64,4 @@ create procedure insert_user (
      
  --     insert into user_permision (permision_id,user_id)
 --      value(?,?)
+
