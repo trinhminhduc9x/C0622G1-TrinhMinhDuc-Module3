@@ -29,7 +29,6 @@
             bottom: 0;
             z-index: -1;
         }
-
         /* page content */
         h1, h2 {
             color: white;
@@ -37,14 +36,11 @@
             font-weight: bold;
             text-align: center;
         }
-
         h1 {
             font-size: 6rem;
             margin-top: 30vh;
         }
-
         h2 { font-size: 3rem; }
-
         @media (max-width: 750px) {
             #background-video { display: none; }
             body {
@@ -100,7 +96,7 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <div>
-                    <a href="">Nguyễn Trần Thảo Nhiên</a>
+                    <a href="">Minh Đức</a>
                 </div>
             </div>
         </div>
@@ -109,165 +105,165 @@
 <div style="height: 150px;"></div>
 <h1 class="p-3 text-white text-center bg-danger">LIST CONTRACT</h1>
 
-    <div class="container mt-5 mb-5">
-        <table id="listContract" class="table table-hover table-bordered">
-            <thead class="bg-danger text-white fw-bold text-center">
-            <tr>
-                <th>#</th>
-                <th>Dịch vụ</th>
-                <th>Khách hàng</th>
-                <th>Ngày bắt đầu</th>
-                <th>Ngày kết thúc</th>
-                <th>Tiền Đặt cọc</th>
-                <th>Tổng Tiền</th>
-                <th>Dịch vụ đi kèm</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>Room twin 01</td>
-                <td>Nguyễn Thị Hào</td>
-                <td>08/12/2021</td>
-                <td>12/12/2021</td>
-                <td>0</td>
-                <td>1000000</td>
-                <td>
-                    <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
-                            +
-                        </button>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
-                                Danh sách các dịch vụ đi kèm
-                            </button>
-                        </div>
+<div class="container mt-5 mb-5">
+    <table id="listContract" class="table table-hover table-bordered">
+        <thead class="bg-danger text-white fw-bold text-center">
+        <tr>
+            <th>#</th>
+            <th>Dịch vụ</th>
+            <th>Khách hàng</th>
+            <th>Ngày bắt đầu</th>
+            <th>Ngày kết thúc</th>
+            <th>Tiền Đặt cọc</th>
+            <th>Tổng Tiền</th>
+            <th>Dịch vụ đi kèm</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Room twin 01</td>
+            <td>Nguyễn Thị Hào</td>
+            <td>08/12/2021</td>
+            <td>12/12/2021</td>
+            <td>0</td>
+            <td>1000000</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </div>
 
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Room twin 01</td>
-                <td>Nguyễn Thị Hào</td>
-                <td>08/12/2021</td>
-                <td>12/12/2021</td>
-                <td>0</td>
-                <td>1000000</td>
-                <td>
-                    <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
-                            +
-                        </button>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
-                            Danh sách các dịch vụ đi kèm
-                        </button>
-                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Room twin 01</td>
+            <td>Nguyễn Thị Hào</td>
+            <td>08/12/2021</td>
+            <td>12/12/2021</td>
+            <td>0</td>
+            <td>1000000</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </div>
 
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Room twin 01</td>
-                <td>Nguyễn Thị Hào</td>
-                <td>08/12/2021</td>
-                <td>12/12/2021</td>
-                <td>0</td>
-                <td>1000000</td>
-                <td>
-                    <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
-                            +
-                        </button>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
-                            Danh sách các dịch vụ đi kèm
-                        </button>
-                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Room twin 01</td>
+            <td>Nguyễn Thị Hào</td>
+            <td>08/12/2021</td>
+            <td>12/12/2021</td>
+            <td>0</td>
+            <td>1000000</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </div>
 
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Room twin 01</td>
-                <td>Nguyễn Thị Hào</td>
-                <td>08/12/2021</td>
-                <td>12/12/2021</td>
-                <td>0</td>
-                <td>1000000</td>
-                <td>
-                    <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
-                            +
-                        </button>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
-                            Danh sách các dịch vụ đi kèm
-                        </button>
-                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Room twin 01</td>
+            <td>Nguyễn Thị Hào</td>
+            <td>08/12/2021</td>
+            <td>12/12/2021</td>
+            <td>0</td>
+            <td>1000000</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </div>
 
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Room twin 01</td>
-                <td>Nguyễn Thị Hào</td>
-                <td>08/12/2021</td>
-                <td>12/12/2021</td>
-                <td>0</td>
-                <td>1000000</td>
-                <td>
-                    <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
-                            +
-                        </button>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
-                            Danh sách các dịch vụ đi kèm
-                        </button>
-                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Room twin 01</td>
+            <td>Nguyễn Thị Hào</td>
+            <td>08/12/2021</td>
+            <td>12/12/2021</td>
+            <td>0</td>
+            <td>1000000</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </div>
 
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Room twin 01</td>
-                <td>Nguyễn Thị Hào</td>
-                <td>08/12/2021</td>
-                <td>12/12/2021</td>
-                <td>0</td>
-                <td>1000000</td>
-                <td>
-                    <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
-                            +
-                        </button>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
-                            Danh sách các dịch vụ đi kèm
-                        </button>
-                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Room twin 01</td>
+            <td>Nguyễn Thị Hào</td>
+            <td>08/12/2021</td>
+            <td>12/12/2021</td>
+            <td>0</td>
+            <td>1000000</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </div>
 
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Room twin 01</td>
-                <td>Nguyễn Thị Hào</td>
-                <td>08/12/2021</td>
-                <td>12/12/2021</td>
-                <td>0</td>
-                <td>1000000</td>
-                <td>
-                    <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
-                            +
-                        </button>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
-                            Danh sách các dịch vụ đi kèm
-                        </button>
-                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Room twin 01</td>
+            <td>Nguyễn Thị Hào</td>
+            <td>08/12/2021</td>
+            <td>12/12/2021</td>
+            <td>0</td>
+            <td>1000000</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContract">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listService">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </div>
 
-                </td>
-            </tr>
+            </td>
+        </tr>
 
-            </tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
+</div>
 
 <%--modal add contract--%>
 <div class="modal" id="addContract">
@@ -355,7 +351,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-               <p>List Service</p>
+                <p>List Service</p>
                 <table class="table table-bordered table-hover">
                     <thead class="bg-danger text-white text-center fw-bold">
                     <tr>
@@ -411,7 +407,7 @@
                         <td>đầy đủ đồ ăn, tráng miệng</td>
                     </tr>
                     </tbody>
-                    
+
                 </table>
             </div>
 

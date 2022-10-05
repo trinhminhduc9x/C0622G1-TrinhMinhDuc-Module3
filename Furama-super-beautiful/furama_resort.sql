@@ -16,6 +16,26 @@ CREATE TABLE division (
     division_name VARCHAR(45)
 );
 
+CREATE TABLE user (
+	uer_name VARCHAR(255) PRIMARY KEY ,
+    password VARCHAR(45)
+);
+
+CREATE TABLE role (
+	role_id int PRIMARY KEY AUTO_INCREMENT,
+    role_name VARCHAR(255)
+);
+
+CREATE TABLE user_role (
+	role_id int,
+    uer_name VARCHAR(255),
+     FOREIGN KEY (role_id)
+        REFERENCES role (role_id)  on delete cascade,
+        FOREIGN KEY (uer_name)
+        REFERENCES user (uer_name)  on delete cascade
+);
+
+
 CREATE TABLE employee (
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_name VARCHAR(45) NOT NULL,
@@ -28,12 +48,15 @@ CREATE TABLE employee (
     position_id INT NOT NULL,
     education_degree_id INT NOT NULL,
     division_id INT NOT NULL,
+    uer_name VARCHAR(255) ,
     FOREIGN KEY (position_id)
         REFERENCES position (position_id) on delete cascade,
     FOREIGN KEY (education_degree_id)
         REFERENCES education_degree (education_degree_id)  on delete cascade,
     FOREIGN KEY (division_id)
-        REFERENCES division (division_id)  on delete cascade
+        REFERENCES division (division_id)  on delete cascade,
+         FOREIGN KEY (uer_name)
+        REFERENCES user (uer_name)  on delete cascade
 );
 
 CREATE TABLE customer_type (

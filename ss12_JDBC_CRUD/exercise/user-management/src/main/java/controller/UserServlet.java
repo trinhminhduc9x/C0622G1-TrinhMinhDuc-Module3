@@ -67,11 +67,7 @@ public class UserServlet extends HttpServlet {
             case "update":
                 updateUser(request,response);
                 break;
-//            case "delete":
-//                showDeleteUser(request,response);
-//                break;
             case "search":
-  //              searchUser(request,response);
                 searchId(request,response);
             default:
                 showListUser(request, response);
@@ -154,25 +150,6 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-
-
-//    private void showDeleteUser(HttpServletRequest request, HttpServletResponse response) {
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/delete.jsp");
-//        int id = Integer.parseInt(request.getParameter("id"));
-//        User user = userService.findById(id);
-//        if (user==null){
-//            request.setAttribute("message","Not found");
-//        } else {
-//            request.setAttribute("user",user);
-//        }
-//        try {
-//            requestDispatcher.forward(request,response);
-//        } catch (ServletException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     private void updateUser(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));

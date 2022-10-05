@@ -30,7 +30,7 @@ begin
     end $$
     delimiter ;
     
-    call get_user_by_id(1);
+    call get_user_by_id(2);
     
     delimiter $$
 create procedure insert_user (

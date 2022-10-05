@@ -12,45 +12,48 @@
 <head>
   <title>Title</title>
   <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-<style>
-  /*body{*/
-  /*  background: url("https://img.freepik.com/free-vector/soft-colorful-watercolor-texture-decorative-background-vector_1055-12347.jpg?w=2000");*/
-  /*}*/
-  #background-video {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-
-  /* page content */
-  h1, h2 {
-    color: white;
-    font-family: Trebuchet MS;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 6rem;
-    margin-top: 30vh;
-  }
-
-  h2 { font-size: 3rem; }
-
-  @media (max-width: 750px) {
-    #background-video { display: none; }
-    body {
-      background: url("https://www.danang.intercontinental.com/wp-content/uploads/2021/12/Final_Ambient_Header_v5_Sep8_MED.mp4") no-repeat;
-      background-size: cover;
+  <style>
+    /*body{*/
+    /*  background: url("https://img.freepik.com/free-vector/soft-colorful-watercolor-texture-decorative-background-vector_1055-12347.jpg?w=2000");*/
+    /*}*/
+    #background-video {
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
     }
-  }
-</style>
+    /* page content */
+    h2 {
+      color: white;
+      font-family: Trebuchet MS;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 600%;
+      margin: 30vh;
+      color: #f1df9d;
+      font-family: "Times New Roman";
+      font-weight: bold;
+      text-align: center;
+      font-style: italic;
+
+    }
+    h2 { font-size: 3rem; }
+    @media (max-width: 750px) {
+      #background-video { display: none; }
+      body {
+        background: url("https://www.danang.intercontinental.com/wp-content/uploads/2021/12/Final_Ambient_Header_v5_Sep8_MED.mp4") no-repeat;
+        background-size: cover;
+      }
+    }
+  </style>
 </head>
 <body>
 <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
@@ -61,36 +64,14 @@
   <div class="row">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                class="active w-75 h-75" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="w-75 h-75"
-                aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="w-75 h-75"
-                aria-label="Slide 3"></button>
       </div>
-<%--      <div class="carousel-inner">--%>
-<%--        <div class="carousel-item active">--%>
-<%--          <img src="slider/img1.jpg" height="750" width="1200" class="d-block img-fluid" alt="img1"/>--%>
-<%--        </div>--%>
-<%--        <div class="carousel-item">--%>
-<%--          <img src="slider/img2.jpg" height="750" width="1200" class="d-block img-fluid" alt="img2"/>--%>
-<%--        </div>--%>
-<%--        <div class="carousel-item">--%>
-<%--          <img src="slider/img3.jpg" height="750" width="1200" class="d-block img-fluid" alt="img3"/>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div>
+        <h1 >  WELCOME TO FURAMA </h1>
+      </div>
     </div>
+
   </div>
+</div>
 </div>
 
 <!--Content-->
@@ -101,14 +82,14 @@
         BEING A CULINARY RESORT IN VIET NAM
       </p>
     </div>
-<%--    <div class="col-md-4">--%>
-<%--      <iframe width="90%" height="90%" src="https://www.youtube.com/embed/IjlT_4mvd-c"--%>
-<%--              title="The Furama Resort DaNang - Couples Corporate" frameborder="0"--%>
-<%--              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"--%>
-<%--              allowfullscreen></iframe>--%>
-<%--    </div>--%>
     <div class="col-md-4">
-      <p class="text-secondary">Overlooking the long stretch of wide white sand on Danang Beach, Furama Resort Danang is a gateway to
+      <iframe width="90%" height="90%" src="https://www.youtube.com/embed/IjlT_4mvd-c"
+              title="The Furama Resort DaNang - Couples Corporate" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+    <div class="col-md-4">
+      <p class="text-secondary text-info ">Overlooking the long stretch of wide white sand on Danang Beach, Furama Resort Danang is a gateway to
         three World Heritage Sites of Hoi An (20 minutes), My Son (90 minutes) and Hue (2 hours). The 198 rooms
         and suites plus 70 two to four bedroom pool villas feature tasteful décor, designed with traditional
         Vietnamese style and a touch of French colonial architecture and guarantee the Vietnam’s the most
@@ -118,10 +99,10 @@
   </div>
   <div class="card m-3" style="max-width: 90%">
     <div class="row g-0">
-<%--      <div class="col-md-6">--%>
-<%--        <img src="https://furamavietnam.com/wp-content/uploads/2018/07/CULIRARY.jpg"--%>
-<%--             class="img-fluid rounded-start" alt="img1">--%>
-<%--      </div>--%>
+      <div class="col-md-6">
+        <img src="https://furamavietnam.com/wp-content/uploads/2018/07/CULIRARY.jpg"
+             class="img-fluid rounded-start" alt="img1">
+      </div>
       <div class="col-md-6">
         <div class="p-5">
           <div class="card-body">
@@ -151,18 +132,18 @@
           </div>
         </div>
       </div>
-<%--      <div class="col-md-6">--%>
-<%--        <img src="https://furamavietnam.com/wp-content/uploads/2018/07/RECREATION.jpg"--%>
-<%--             class="img-fluid rounded-start" alt="img1">--%>
-<%--      </div>--%>
+      <div class="col-md-6">
+        <img src="https://furamavietnam.com/wp-content/uploads/2018/07/RECREATION.jpg"
+             class="img-fluid rounded-start" alt="img1">
+      </div>
     </div>
   </div>
   <div class="card m-3" style="max-width: 90%">
     <div class="row g-0">
-<%--      <div class="col-md-6">--%>
-<%--        <img src="https://furamavietnam.com/wp-content/uploads/2018/10/02.-ICP-ICP_Furama_Danang_-Ball-Room-4.jpg"--%>
-<%--             class="img-fluid rounded-start" alt="img1">--%>
-<%--      </div>--%>
+      <div class="col-md-6">
+        <img src="https://furamavietnam.com/wp-content/uploads/2018/10/02.-ICP-ICP_Furama_Danang_-Ball-Room-4.jpg"
+             class="img-fluid rounded-start" alt="img1">
+      </div>
       <div class="col-md-6">
         <div class="card-body">
           <div>
