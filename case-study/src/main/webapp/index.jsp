@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
   <style>
   body{
-  background: url("https://img.freepik.com/free-vector/soft-colorful-watercolor-texture-decorative-background-vector_1055-12347.jpg?w=2000");*/
+  background: url("https://img.freepik.com/free-vector/soft-colorful-watercolor-texture-decorative-background-vector_1055-12347.jpg?w=2000");
   }
     /* page content */
     h2 {
@@ -38,6 +38,15 @@
     @media (max-width: 750px) {
       #background-video { display: none; }
     }
+  #welcome{
+    position: absolute;
+    top:100px;
+
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+  }
   </style>
 </head>
 <body>
@@ -47,7 +56,17 @@
          style="width: 1365px; height: 650px;">
 
   </video>
-  
+
+  <div id="welcome" >
+    <div >
+          <div >
+            <h1 >  WELCOME TO FURAMA </h1>
+          </div>
+    </div>
+  </div>
+
+
+
 <!--Content-->
 <div class="container">
   <div class="row mt-5">
