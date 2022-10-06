@@ -170,6 +170,5 @@ public class CustomerServlet extends HttpServlet {
             request.setAttribute("customerTypeList",customerTypeList);
             request.getRequestDispatcher("view/customer/add.jsp").forward(request,response);
         }
-
     }
 }
