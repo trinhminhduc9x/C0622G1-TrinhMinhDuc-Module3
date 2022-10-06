@@ -1,26 +1,36 @@
 package model.people;
 
 public class Customer {
-    private  int id;
-    private int CustomerTypeId;
-    private String CustomerName;
-    private String DateOfBirth;
+    private int id;
+    private int customerTypeId;
+    private String name;
+    private String dateOfBirth;
     private boolean gender;
     private String idCard;
     private String phoneNumber;
     private String email;
     private String address;
-
     public Customer() {
     }
 
-    public Customer(int id, int customerTypeId, String customerName, String dateOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address) {
+    public Customer(int id, int customerTypeId, String name, String dateOfBirth, boolean gender, String id_card, String phoneNumber, String email, String address) {
         this.id = id;
-        CustomerTypeId = customerTypeId;
-        CustomerName = customerName;
-        DateOfBirth = dateOfBirth;
+        this.customerTypeId = customerTypeId;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
         this.gender = gender;
-        this.idCard = idCard;
+        this.idCard = id_card;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+    }
+
+    public Customer(int customerTypeId, String name, String dateOfBirth, boolean gender, String id_card, String phoneNumber, String email, String address) {
+        this.customerTypeId = customerTypeId;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.idCard = id_card;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.address = address;
@@ -35,27 +45,27 @@ public class Customer {
     }
 
     public int getCustomerTypeId() {
-        return CustomerTypeId;
+        return customerTypeId;
     }
 
     public void setCustomerTypeId(int customerTypeId) {
-        CustomerTypeId = customerTypeId;
+        this.customerTypeId = customerTypeId;
     }
 
-    public String getCustomerName() {
-        return CustomerName;
+    public String getName() {
+        return name;
     }
 
-    public void setCustomerName(String customerName) {
-        CustomerName = customerName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDateOfBirth() {
-        return DateOfBirth;
+        return dateOfBirth;
     }
 
     public void setDateOfBirth(String dateOfBirth) {
-        DateOfBirth = dateOfBirth;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public boolean isGender() {

@@ -14,11 +14,11 @@
 <head>
     <title>Update Customer</title>
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-<style>
-    body{
-        background: url("https://media.istockphoto.com/vectors/pop-art-background-in-retro-comics-book-style-with-halftone-texture-vector-id1363447269?b=1&k=20&m=1363447269&s=612x612&w=0&h=awdTuITih4GmkyjQw4pxMx_cuY4LOTSEzGvaCwgZUGQ=");
-    }
-</style>
+    <style>
+        body{
+            background: url("https://media.istockphoto.com/vectors/pop-art-background-in-retro-comics-book-style-with-halftone-texture-vector-id1363447269?b=1&k=20&m=1363447269&s=612x612&w=0&h=awdTuITih4GmkyjQw4pxMx_cuY4LOTSEzGvaCwgZUGQ=");
+        }
+    </style>
 </head>
 <body>
 <div style="height: 150px;"></div>

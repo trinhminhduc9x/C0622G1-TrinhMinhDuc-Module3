@@ -33,7 +33,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=customer" tabindex="-1" aria-disabled="true">Customer</a>
+                        <a class="nav-link  fw-bold" href="/Customer" tabindex="-1" aria-disabled="true">Customer</a>
                     </li>
 
                     <li class="nav-item">

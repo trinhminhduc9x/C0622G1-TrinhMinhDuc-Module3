@@ -11,11 +11,11 @@
 <html lang="en">
 <head>
   <title>Title</title>
-  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
-  body{
-  background: url("https://img.freepik.com/free-vector/soft-colorful-watercolor-texture-decorative-background-vector_1055-12347.jpg?w=2000");
-  }
+    body{
+      background: url("https://img.freepik.com/free-vector/soft-colorful-watercolor-texture-decorative-background-vector_1055-12347.jpg?w=2000");
+    }
     /* page content */
     h2 {
       color: white;
@@ -25,47 +25,50 @@
     }
 
     h1 {
-      font-size: 600%;
-      margin: 30vh;
+
+      font-size: 300%;
+      margin: 0 auto;
+      width:100%;
+      height:100%;
+      display: flex; /* Canh giữa bằng flex */
+      justify-content: center;
+      align-items: center;
       color: #f1df9d;
       font-family: "Times New Roman";
       font-weight: bold;
       text-align: center;
       font-style: italic;
-
+      position: absolute;
     }
     h2 { font-size: 3rem; }
     @media (max-width: 750px) {
       #background-video { display: none; }
     }
-  #welcome{
-    position: absolute;
-    top:100px;
 
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 4s;
-  }
+    #right{
+      width: 234px;
+      min-height: 400px;
+      border: 1px solid #CDCDCD;
+      float:right;
+      margin-bottom: 5px;
+      position: absolute;
+      right: 5px;
+    }
+
   </style>
 </head>
 <body>
-
+<div>
+  <div class="elementor-widget-container"> <h1> WELCOME TO FURAMA</h1> </div>
+  <div id="right"class="elementor-widget-container">
+    <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/308502699_3008581789287835_5719446584805519901_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=Dd_3xUfjMOIAX8kJFtp&_nc_ht=scontent.fdad3-6.fna&oh=00_AT95h74RTH7IshXJPxfoCVBcvKKsewYH37MvS0VPIqB4Jg&oe=634318D9" width="100%">
+  </div>
   <video  autoplay="" muted="" playsinline="" loop=""
-         src="https://www.danang.intercontinental.com/wp-content/uploads/2021/12/Final_Ambient_Header_v5_Sep8_MED.mp4"
-         style="width: 1365px; height: 650px;">
-
+          src="https://www.danang.intercontinental.com/wp-content/uploads/2021/12/Final_Ambient_Header_v5_Sep8_MED.mp4"
+          style="width: 1365px; height: 650px;">
   </video>
 
-  <div id="welcome" >
-    <div >
-          <div >
-            <h1 >  WELCOME TO FURAMA </h1>
-          </div>
-    </div>
-  </div>
-
-
+</div>
 
 <!--Content-->
 <div class="container">

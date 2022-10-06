@@ -120,7 +120,7 @@
             </div>
 
             <div class="col-md-6">
-                <%--                Số Cmnd--%>
+                <%-- Số Cmnd--%>
                 <div class="mb-3 mt-3">
                     <label for="idCard" class="form-label">Enter Customer Id Card</label>
                     <input type="text" class="form-control" placeholder="Enter customer Id Card"
@@ -165,47 +165,6 @@
 </div>
 </div>
 
-<%--<!-- Button to Open the Modal -->--%>
-<%--<button type="button" class="btn btn-primary" data-bs-toggle="modal" id="messBtn" data-bs-target="#messModal ">--%>
-<%--    Open modal--%>
-<%--</button>--%>
-
-<%--<!-- The Modal -->--%>
-<%--<div class="modal" id="messModal">--%>
-<%--    <div class="modal-dialog">--%>
-<%--        <div class="modal-content">--%>
-
-<%--            <!-- Modal Header -->--%>
-<%--            <div class="modal-header">--%>
-<%--                <h4 class="modal-title">Modal Heading</h4>--%>
-<%--                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>--%>
-<%--            </div>--%>
-
-<%--            <!-- Modal body -->--%>
-<%--            <div class="modal-body">--%>
-<%--                <div class="d-flex justify-content-center m-5">--%>
-<%--                    <c:if test="${check==true}">--%>
-<%--                        <p class="w-50 bg-success p-1 text-center text-white">SUCCESS!</p>--%>
-<%--                    </c:if>--%>
-<%--                    <c:if test="${check==false}">--%>
-<%--                        <p class="w-50 bg-danger p-1 text-center text-white">FAIL!</p>--%>
-<%--                    </c:if>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-
-<%--            <!-- Modal footer -->--%>
-<%--            <div class="modal-footer">--%>
-<%--                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>--%>
-<%--            </div>--%>
-
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
-
-<%--<script>--%>
-<%--    document.getElementById("messBtn").onclick();--%>
-<%--</script>--%>
 <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
