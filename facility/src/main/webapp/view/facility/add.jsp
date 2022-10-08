@@ -1,170 +1,221 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Asus
   Date: 8/7/2022
-  Time: 12:53 AM
+  Time: 12:25 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ include file="/view/include/navbar.jsp" %>
 <html>
 <head>
-    <title>Add Customer</title>
+    <title>Add Facility</title>
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <style>
         body {
-            background: url("https://img.freepik.com/free-vector/abstract-watercolor-pastel-background_87374-139.jpg?w=2000");
+            background: url("https://wallpaperaccess.com/full/187163.jpg") 100%;
         }
     </style>
 </head>
 <body>
-<!--navbar-->
-<div class="fixed-top" style="margin: 0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
-                    <div class="container" style="width: 60px;height: 60px">
-                        <a class="navbar-brand" href="/Furama">
-                            <img class="img-fluid"
-                                 src="https://furamavietnam.com/wp-content/uploads/2018/08/logo@2x.png" alt="">
-                        </a>
+
+<h1 class="p-3 bg-success text-white text-center">ADD FACILITY</h1>
+
+<%--Hiện thị kết quả thêm được không--%>
+
+
+<c:if test="${check!=null}">
+
+    <button type="button" class="btn btn-primary" id="modalBtn" data-bs-toggle="modal" data-bs-target="#resultMess">
+        Open modal
+    </button>
+    <div class="modal" id="resultMess">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">Kết quả thêm mới</div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <c:if test="${check=true}">
+                            <p class="fw-bold text-success">Thêm mới thành công</p>
+                        </c:if>
+                        <c:if test="${check=false}">
+                            <p class="fw-bold text-danger">Thêm mới thất bại</p>
+                        </c:if>
                     </div>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=employee">Employee</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=customer" tabindex="-1" aria-disabled="true">Customer</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=service" tabindex="-1" aria-disabled="true">Service</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=contract" tabindex="-1" aria-disabled="true">Contract</a>
-                    </li>
-                </ul>
-                <form class="d-flex ">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <div>
-                    <a href="">Minh Đức</a>
                 </div>
+                <!-- Modal footer -->
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</c:if>
+<%--Form add--%>
+
+
+<div class="d-flex justify-content-center">
+    <form action="/Facility?action=addFacility" method="post"
+          class="bg-light text-success fw-bold w-50 shadow-lg p-5 mt-5">
+        <div class="d-flex justify-content-center">
+            <div>
+                <div id="" class="form-text">Select facility to add</div>
+                <select name="facilityTypeId" id="FacilityType"
+                        class="border-success border-5 rounded-pill form-select-lg" onchange="displayInput()">
+                    <option value="none">Select facility type</option>
+                    <option value="1">Villa</option>
+                    <option value="2">House</option>
+                    <option value="3">Room</option>
+                </select>
             </div>
         </div>
-    </nav>
-</div>
-
-<div style="height: 150px;"></div>
-
-<h1 class="p-3 text-center text-white bg-primary">ADD CUSTOMER</h1>
-
-<%--//message--%>
-<div class="d-flex justify-content-center m-5">
-    <c:if test="${check==true}">
-        <p class="w-50 bg-success p-1 text-center text-white">SUCCESS!</p>
-    </c:if>
-    <c:if test="${check==false}">
-        <p class="w-50 bg-danger p-1 text-center text-white">FAIL!</p>
-    </c:if>
-</div>
-
-<%--form add--%>
-<div class="d-flex justify-content-center m-5">
-    <form class="w-75 text-primary fw-bold shadow-lg p-5 bg-light" action="/Customer?action=addCustomer" method="post">
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-md-6">
-                <div class="mb-3 mt-3">
-                    <p>Select customer type</p>
-                    <select class="form-control" name="customerType" id="customerType">
-                        <c:forEach var="customerType" items="${customerTypeList}">
-                            <option value="${customerType.customerTypeId}">${customerType.customerTypeName}</option>
-                        </c:forEach>
-                    </select>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" requiredplaceholder="Enter facility name" name="name" id="name"
+                    value="${facility.facilityName}">
+                    <p class="text-danger">${errorMap.get("name")}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="area" class="form-label">Area</label>
+                    <input type="text" class="form-control" required id="area" placeholder="Enter Area" name="area" value="${facility.area}">
+                    <p class="text-danger">${errorMap.get("area")}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="cost" class="form-label">Cost</label>
+                    <input type="text" class="form-control" required id="cost" placeholder="Enter Cost" name="cost" value="${facility.cost}">
+                    <p class="text-danger">${errorMap.get("cost")}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="maxPeople" class="form-label">Max people</label>
+                    <input type="text" class="form-control" required id="maxPeople" placeholder="Enter Max people" value="${facility.maxPeople}"
+                           name="maxPeople">
+                    <p class="text-danger">${errorMap.get("maxPeople")}</p>
                 </div>
 
-                <%--       Tên khách hàng         --%>
-                <div class="mb-3 mt-3">
-                    <label for="name" class="form-label">Enter name</label>
-                    <input type="text" class="form-control" id="name" value="${customer.name}"
-                           placeholder="Enter customer name" name="name">
-                    <p class="text-danger">${errorList.get("name")}</p>
-                </div>
+                <p>Select Rent Type id</p>
+                <select name="rentTypeId" id="rentTypeId" class="form-control border-success">
+                    <c:forEach var="rentType" items="${rentTypeList}">
+                        <option value="${rentType.rentTypeId}">${rentType.rentTypeName}</option>
+                    </c:forEach>
+                </select>
 
-                <%--Ngày sinh--%>
-                <div class="mb-3 mt-3">
-                    <label for="birthday" class="form-label">Select birthday</label>
-                    <input type="date" class="form-control" name="dayOfBirth" id="birthday"
-                           value="${customer.dateOfBirth}">
-                    <p class="text-danger">${errorList.get("birthday")}</p>
-                </div>
-
-                <%--                giới tính--%>
-                <div class="mb-3 mt-3">
-                    <p>Select gender</p>
-                    <select class=" form-control" name="gender" id="gender" value="${customer.gender}">
-                        <option value="true">Male</option>
-                        <option value="false">Female</option>
-                    </select>
-                </div>
             </div>
-
             <div class="col-md-6">
-                <%-- Số Cmnd--%>
-                <div class="mb-3 mt-3">
-                    <label for="idCard" class="form-label">Enter Customer Id Card</label>
-                    <input type="text" class="form-control" placeholder="Enter customer Id Card"
-                           value="${customer.idCard}" id="idCard" name="idCard">
-                    <p class="text-danger">${errorList.get("idCard")}</p>
+                <div style="display: none" id="divStandardRoom">
+                    <div class="mb-3">
+                        <label for="standardRoom" class="form-label">Standard room</label>
+                        <input type="text" class="form-control" id="standardRoom" placeholder="Enter standard room" value="${facility.standardRoom}"
+                               name="standardRoom">
+                    </div>
                 </div>
 
-
-                <%-- Số điện thoại   --%>
-                <div class="mb-3 mt-3">
-                    <label for="phone" class="form-label">Enter customer phone</label>
-                    <input type="text" class="form-control" placeholder="Enter customer phone" id="phone" name="phone"
-                           value="${customer.phoneNumber}">
-                    <p class="text-danger">${errorList.get("phone")}</p>
+                <div style="display: none" id="divDescriptionOtherConvenience">
+                    <div class="mb-3">
+                        <label for="descriptionOtherConvenience" class="form-label">Description other
+                            convenience</label>
+                        <input type="text" class="form-control" id="descriptionOtherConvenience" value="${facility.descriptionOtherConvenience}"
+                               placeholder="Enter description other convenience" name="descriptionOtherConvenience">
+                    </div>
                 </div>
 
-
-
-                <%--    email--%>
-                <div class="mb-3 mt-3">
-                    <label for="email" class="form-label">Enter customer email</label>
-                    <input type="text   " class="form-control" placeholder="Enter customer email" id="email" name="email"
-                           value="${customer.email}">
-                    <p class="text-danger">${errorList.get("email")}</p>
+                <div style="display: none" id="divPoolArea">
+                    <div class="mb-3">
+                        <label for="poolArea" class="form-label">Pool area</label>
+                        <input type="text" class="form-control" required id="poolArea" placeholder="Enter pool area" value="${facility.poolArea}"
+                               name="poolArea">
+                        <p class="text-danger">${errorMap.get("poolArea")}</p>
+                    </div>
                 </div>
 
+                <div style="display: none" id="divNumberOfFloor">
+                    <div class="mb-3">
+                        <label for="numberOfFloor" class="form-label">Number of floor</label>
+                        <input type="text" class="form-control" required id="numberOfFloor" placeholder="Enter number of floor"
+                               value="${facility.numberOfFloor}" name="numberOfFloor">
+                        <p class="text-danger">${errorMap.get("numberOfFloor")}</p>
+                    </div>
+                </div>
 
-                <%--    Địa chỉ--%>
-                <div class="mb-3 mt-3">
-                    <label for="address" class="form-label">Enter customer adress</label>
-                    <input type="text" class="form-control" placeholder="Enter customer adress" id="address"
-                           value="${customer.address}" name="address">
+                <div style="display: none" id="divFacilityFree">
+                    <div class="mb-3">
+                        <label for="facilityFree" class="form-label">facility free</label>
+                        <input type="text" class="form-control" id="facilityFree" placeholder="Enter facility free"
+                               value="${facility.facilityName}" name="facilityFree">
+                    </div>
                 </div>
             </div>
         </div>
-        <div>
-            <button class="btn btn-primary">ADD</button>
-            <a class="btn btn-success" href="/Customer">RETURN</a>
+        <div class="mt-5 d-flex justify-content-evenly">
+            <button class="btn btn-success btn-lg" id="addBtn">ADD</button>
+            <a class="btn btn-primary" href="/Facility">Return Facility List</a>
         </div>
-
     </form>
 </div>
 </div>
+<script>
+    window.onload = setStatusBtn(false);
+    document.getElementById("resultMess").click();
+
+
+    function displayInput() {
+        let facilityChoice = document.getElementById("FacilityType").value;
+        console.log(facilityChoice);
+        let divStandardRoom = document.getElementById("divStandardRoom");
+        let divDescriptionOtherConvenience = document.getElementById("divDescriptionOtherConvenience");
+        let divPoolArea = document.getElementById("divPoolArea");
+        let divNumberOfFloor = document.getElementById("divNumberOfFloor");
+        let divFacilityFree = document.getElementById("divFacilityFree");
+        switch (facilityChoice) {
+            case "none":
+                divStandardRoom.style.display = "none";
+                divDescriptionOtherConvenience.style.display = "none";
+                divPoolArea.style.display = "none";
+                divNumberOfFloor.style.display = "none";
+                divFacilityFree.style.display = "none";
+                // setStatusBtn(false)
+                break
+            case "1":
+                //villa
+                divStandardRoom.style.display = "block";
+                divDescriptionOtherConvenience.style.display = "block";
+                divPoolArea.style.display = "block";
+                divNumberOfFloor.style.display = "block";
+                divFacilityFree.style.display = "none";
+                document.getElementById("FacilityFree").value="";
+                // setStatusBtn(true);
+                break
+            case "2":
+                //house
+                divStandardRoom.style.display = "block";
+                divDescriptionOtherConvenience.style.display = "block";
+                divPoolArea.style.display = "none";
+                document.getElementById("poolArea").value=0;
+                divNumberOfFloor.style.display = "block";
+                divNumberOfFloor.style.display = "block";
+                divFacilityFree.style.display = "none";
+                document.getElementById("facilityFree").value="";
+                // setStatusBtn(true);
+                break
+            case "3":
+                //room
+                divStandardRoom.style.display = "none";
+                document.getElementById("standardRoom").value="";
+                divDescriptionOtherConvenience.style.display = "none";
+                document.getElementById("descriptionOtherConvenience").value="";
+                divPoolArea.style.display = "none";
+                document.getElementById("poolArea").value=0;
+                divNumberOfFloor.style.display = "none";
+                document.getElementById("numberOfFloor").value=0;
+                divFacilityFree.style.display = "block";
+                // setStatusBtn(true);
+                break
+        }
+    }
+</script>
 
 <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>

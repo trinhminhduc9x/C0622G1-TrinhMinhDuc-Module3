@@ -23,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
                     <div class="container" style="width: 60px;height: 60px">
-                        <a class="navbar-brand"href="/Customer">
+                        <a class="navbar-brand"href="/Facility">
                             <img class="img-fluid" src="https://furamavietnam.com/wp-content/uploads/2018/08/logo@2x.png" alt="">
                         </a>
                     </div>
 
                     <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Customer" tabindex="-1" aria-disabled="true">Customer</a>
+                        <a class="nav-link  fw-bold" href="/Facility" tabindex="-1" aria-disabled="true">Facility</a>
                     </li>
 
 

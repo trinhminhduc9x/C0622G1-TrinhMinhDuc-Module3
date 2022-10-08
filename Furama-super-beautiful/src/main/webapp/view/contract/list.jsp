@@ -13,49 +13,16 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
     <style>
-        /*body {*/
-        /*    background: url("https://img.freepik.com/premium-vector/galaxy-fantasy-background-with-pastel-color_38409-1774.jpg?w=2000")*/
-        /*}*/
-        /* video background */
-        #background-video {
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-        /* page content */
-        h1, h2 {
-            color: white;
-            font-family: Trebuchet MS;
-            font-weight: bold;
-            text-align: center;
-        }
-        h1 {
-            font-size: 6rem;
-            margin-top: 30vh;
-        }
-        h2 { font-size: 3rem; }
-        @media (max-width: 750px) {
-            #background-video { display: none; }
-            body {
-                background: url("https://www.danang.intercontinental.com/wp-content/uploads/2021/12/Final_Ambient_Header_v5_Sep8_MED.mp4") no-repeat;
-                background-size: cover;
-            }
+        body {
+            background: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
         }
     </style>
 
-
 </head>
 <body>
-<video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-    <source src="https://www.danang.intercontinental.com/wp-content/uploads/2021/12/Final_Ambient_Header_v5_Sep8_MED.mp4" type="video/mp4">
-</video>
 
 <!--navbar-->
 <div class="fixed-top" style="margin: 0">

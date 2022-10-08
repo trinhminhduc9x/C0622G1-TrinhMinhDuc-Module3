@@ -12,6 +12,6 @@
   <title>$Title$</title>
 </head>
 <body>
-<c:redirect url="/Customer"></c:redirect>
+<c:redirect url="/Facility"></c:redirect>
 </body>
 </html>
