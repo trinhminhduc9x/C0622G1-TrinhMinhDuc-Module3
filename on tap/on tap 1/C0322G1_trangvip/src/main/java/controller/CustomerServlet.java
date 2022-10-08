@@ -88,13 +88,13 @@ public class CustomerServlet extends HttpServlet {
 
 
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int id = Integer.parseInt(request.getParameter("id"));
+        int idd = Integer.parseInt(request.getParameter("id"));
         int idMember = Integer.parseInt(request.getParameter("customerType"));
         String name = request.getParameter("name");
         String founding =request.getParameter("founding");
         int number =Integer.parseInt( request.getParameter("number"));
         String address=request.getParameter("address");
-        Customer customer = new Customer(id,idMember,name,number,founding,address);
+        Customer customer = new Customer(idd,idMember,name,number,founding,address);
         Map<String, String> errors = customerService.check(customer);
         if (errors.isEmpty()) {
             customerService.updateCustomer(customer);

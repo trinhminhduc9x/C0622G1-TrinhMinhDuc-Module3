@@ -20,10 +20,10 @@ import java.util.Map;
 @WebServlet(name = "FacilityServlet", urlPatterns = {"/Facility"})
 public class FacilityServlet extends HttpServlet {
 
-    IFacilityService facilityService = new FacilityService();
+    private  IFacilityService facilityService = new FacilityService();
 
-    IFacilityTypeService facilityTypeService = new FacilityTypeService();
-    IRentTypeService rentTypeService = new RentTypeService();
+    private  IFacilityTypeService facilityTypeService = new FacilityTypeService();
+    private  IRentTypeService rentTypeService = new RentTypeService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

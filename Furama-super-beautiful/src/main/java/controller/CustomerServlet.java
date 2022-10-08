@@ -16,8 +16,8 @@ import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", value = "/Customer")
 public class CustomerServlet extends HttpServlet {
-    ICustomerService customerService = new CustomerService();
-    ICustomerTypeService customerTypeService=  new CustomerTypeService();
+ private ICustomerService customerService = new CustomerService();
+    private ICustomerTypeService customerTypeService=  new CustomerTypeService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");

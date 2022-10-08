@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class FacilityService implements IFacilityService {
-    IFacilityrepository facilityrepository = new FacilityRepository();
+  private   IFacilityrepository facilityrepository = new FacilityRepository();
     @Override
     public List<Facility> FindAll() {
         return facilityrepository.FindAll();

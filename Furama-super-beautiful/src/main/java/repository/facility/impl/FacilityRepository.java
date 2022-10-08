@@ -22,8 +22,8 @@ public class FacilityRepository implements IFacilityrepository {
             "area =?,cost =?,max_people=?,  rent_type_id =?,facility_type_id=?," +
             " standard_room =?,description_other_convenience=?,  pool_area =?" +
             ",number_of_floor=?, facility_free =?where facility_id = ?";
-    private String DELETE_FACILITY = "delete from facility where facility_id =?";
-    private String FIND_FACILITY_BY_ID = "select * from facility where facility_id = ?";
+    private String Delete_Facility = "delete from facility where facility_id =?";
+    private String FindFacilityById = "select * from facility where facility_id = ?";
 
     @Override
     public List<Facility> FindAll() {
@@ -114,7 +114,7 @@ public class FacilityRepository implements IFacilityrepository {
     public boolean deleteFacility(int id) {
         Connection connection = BaseRepository.getConnectDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_FACILITY);
+            PreparedStatement preparedStatement = connection.prepareStatement(Delete_Facility);
             preparedStatement.setInt(1,id);
             int check= preparedStatement.executeUpdate();
             return (check==1);
@@ -129,7 +129,7 @@ public class FacilityRepository implements IFacilityrepository {
         Facility facility = null;
         Connection connection = BaseRepository.getConnectDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(FIND_FACILITY_BY_ID);
+            PreparedStatement preparedStatement = connection.prepareStatement(FindFacilityById);
             preparedStatement.setInt(1,id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){

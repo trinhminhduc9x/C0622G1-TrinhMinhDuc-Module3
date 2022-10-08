@@ -44,8 +44,7 @@
             <input type="text" class="form-control" id="address" name="address" value="${customer.address}">
         </div>
         <div>
-            <a href="/customer" class="btn btn-warning">Update</a>
-            <button href="/customer" class="btn btn-success" type="submit">Accept</button>
+            <button class="btn btn-success" type="submit">Accept</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
             </button>
         </div>

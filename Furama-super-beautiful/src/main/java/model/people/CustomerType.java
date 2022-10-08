@@ -1,8 +1,8 @@
 package model.people;
 
 public class CustomerType {
-    int customerTypeId;
-    String customerTypeName;
+    private  int customerTypeId;
+    private String customerTypeName;
 
     public CustomerType(int customerTypeId, String customerTypeName) {
         this.customerTypeId = customerTypeId;

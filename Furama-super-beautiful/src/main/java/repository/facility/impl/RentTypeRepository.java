@@ -11,18 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RentTypeRepository implements repository.facility.IRentTypeRepository {
-    private String FIND_ALL_RENTYPE = "select * from rent_type";
-//    private String ADD_RENTYPE = "select * from rent_type";
-//    private String UPDATE_RENTYPE = "select * from rent_type";
-//    private String DELETE_RENTYPE = "select * from rent_type";
-//    private String FIND_RENTYPE_BY_ID = "select * from rent_type";
+    private String FindAllRentype = "select * from rent_type";
 
     @Override
     public List<RentType> FindAll() {
         List<RentType>rentTypeList = new ArrayList<>();
         Connection connection = BaseRepository.getConnectDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_RENTYPE);
+            PreparedStatement preparedStatement = connection.prepareStatement(FindAllRentype);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                  int rentTypeId = resultSet.getInt("rent_type_id");

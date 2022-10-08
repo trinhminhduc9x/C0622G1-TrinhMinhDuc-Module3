@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FacilityTypeRepository implements IFacilityTypeRepository {
-    private String FIND_ALL_FACILITY_TYPE = "select * from facility_type";
+    private String FindAllFacilityType = "select * from facility_type";
     @Override
     public List<FacilityType> FindAll() {
         List<FacilityType>facilityTypeList = new ArrayList<>();
         Connection connection = BaseRepository.getConnectDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_FACILITY_TYPE);
+            PreparedStatement preparedStatement = connection.prepareStatement(FindAllFacilityType);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                  int facilityTypeId = resultSet.getInt("facility_type_id");
