@@ -65,10 +65,8 @@ public class CustomerServlet extends HttpServlet {
     }
     private void showListSearch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
-        String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
         String customerTypeId = request.getParameter("customerTypeId");
-        List<Customer>customerList = customerService.searchCustomer(name,phone,email,customerTypeId);
+        List<Customer>customerList = customerService.searchCustomer(name,customerTypeId);
         List<CustomerType>customerTypeList = customerTypeService.FindAll();
         request.setAttribute("customerList",customerList);
         request.setAttribute("customerTypeList",customerTypeList);

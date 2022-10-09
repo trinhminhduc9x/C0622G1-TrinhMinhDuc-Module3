@@ -115,20 +115,17 @@ public class CustomerRepository implements ICustomerRepository {
         }
         return customer;
     }
-    private final String SEARCH_CUSTOMER = "select * from customer where customer_name like ? and phone_number like ? " +
-            "and email like ? and customer_type_id like ?";
+    private final String SEARCH_CUSTOMER = "select * from household.house_hold where name_House_Hold like ?  " +
+            " and id_member like ?";
 
     @Override
-    public List<Customer> searchCustomer(String nameSearch, String phoneSearch,
-                                         String emailSearch, String customerTypeIdSearch) {
+    public List<Customer> searchCustomer(String nameSearch, String customerTypeIdSearch) {
         List<Customer>customerList = new ArrayList<>();
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SEARCH_CUSTOMER);
             preparedStatement.setString(1,"%"+nameSearch+"%");
-            preparedStatement.setString(2,"%"+phoneSearch+"%");
-            preparedStatement.setString(3,"%"+emailSearch+"%");
-            preparedStatement.setString(4,"%"+customerTypeIdSearch+"%");
+            preparedStatement.setString(2,"%"+customerTypeIdSearch+"%");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id_House_Hold");// điền đúng tên các cột từ đa ta base//

@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "CustomerServlet", value = "/Customer")
+@WebServlet(name = "CustomerServlet", value = "/Home")
 public class CustomerServlet extends HttpServlet {
     ICustomerService customerService = new CustomerService();
     ICustomerTypeService customerTypeService=  new CustomerTypeService();
@@ -172,11 +172,6 @@ public class CustomerServlet extends HttpServlet {
         }
 
 
-//        boolean check = false;
-//         if (customerService.addCustomer(customer)) {
-//             check = true;
-//         }
-//         request.setAttribute("check",check);
-//         request.getRequestDispatcher("view/customer/add.jsp").forward(request,response);
+
     }
 }

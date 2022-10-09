@@ -36,12 +36,6 @@
                 <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Name" name="name">
                 </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="Phone" name="phone">
-                </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="Email" name="email">
-                </div>
             </div>
             <div class="row mt-2">
                 <select name="customerTypeId" id="" class="form-control">

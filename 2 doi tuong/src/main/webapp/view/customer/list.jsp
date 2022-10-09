@@ -27,11 +27,11 @@
 
 <div class="row container d-flex align-items-end">
     <div class="col-md-6 d-flex justify-content-center" style="height:38px;">
-        <a class="btn-success btn" href="/Customer?action=addCustomer">Add customer</a>
+        <a class="btn-success btn" href="/Home?action=addCustomer">Add customer</a>
     </div>
     <%--    form tìm kiếm--%>
     <div class="col-md-6 mt-2">
-        <form action="/Customer?action=searchCustomer" method="post">
+        <form action="/Home?action=searchCustomer" method="post">
             <div class="row">
                 <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Name" name="name">
@@ -111,7 +111,7 @@
                     <td>${customer.email}</td>
                     <td>${customer.address}</td>
                     <td><a class="btn btn-outline-warning"
-                           href="/Customer?action=updateCustomer&idUpdate=${customer.id}">UPDATE</a>
+                           href="/Home?action=updateCustomer&idUpdate=${customer.id}">UPDATE</a>
                     </td>
                     <td>
                         <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
@@ -140,7 +140,7 @@
                 <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <form action="/Customer?action=deleteCustomer" method="post">
+                <form action="/Home?action=deleteCustomer" method="post">
                     <p>Do you want to delete Customer:</p>
                     <div>
                         <div class="input-group flex-nowrap">

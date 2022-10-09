@@ -36,29 +36,13 @@
                                  src="https://furamavietnam.com/wp-content/uploads/2018/08/logo@2x.png" alt="">
                         </a>
                     </div>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=employee">Employee</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=customer" tabindex="-1" aria-disabled="true">Customer</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=service" tabindex="-1" aria-disabled="true">Service</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  fw-bold" href="/Furama?action=contract" tabindex="-1" aria-disabled="true">Contract</a>
-                    </li>
                 </ul>
                 <form class="d-flex ">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <div>
-                    <a href="">Nguyễn Trần Thảo Nhiên</a>
+                    <a href="">Trẫm tức Trịnh Hoàng Đức Vương</a>
                 </div>
             </div>
         </div>
@@ -81,7 +65,7 @@
 
 <%--form add--%>
 <div class="d-flex justify-content-center m-5">
-    <form class="w-75 text-primary fw-bold shadow-lg p-5 bg-light" action="/Customer?action=addCustomer" method="post">
+    <form class="w-75 text-primary fw-bold shadow-lg p-5 bg-light" action="/Home?action=addCustomer" method="post">
         <div class="row">
             <div class="col-md-6">
                 <div class="mb-3 mt-3">
@@ -158,7 +142,7 @@
         </div>
         <div>
             <button class="btn btn-primary">ADD</button>
-            <a class="btn btn-success" href="/Customer">RETURN</a>
+            <a class="btn btn-success" href="/Home">RETURN</a>
         </div>
 
     </form>

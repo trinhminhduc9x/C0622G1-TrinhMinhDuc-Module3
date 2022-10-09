@@ -38,7 +38,7 @@
 
 <%--form update--%>
 <div class="d-flex justify-content-center m-5">
-    <form class="w-50 text-warning fw-bold shadow-lg p-5 bg-light" action="/Customer?action=updateCustomer" method="post">
+    <form class="w-50 text-warning fw-bold shadow-lg p-5 bg-light" action="/Home?action=updateCustomer" method="post">
         <div class="mb-3">
             <div class="w-100 d-flex justify-content-center">
                 <div class="input-group flex-nowrap">
@@ -125,7 +125,7 @@
         </div>
         <div>
             <button class="btn btn-warning">UPDATE</button>
-            <a class="btn btn-success" href="/Customer">RETURN</a>
+            <a class="btn btn-success" href="/Home">RETURN</a>
         </div>
 
     </form>

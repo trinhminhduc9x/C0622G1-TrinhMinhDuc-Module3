@@ -59,11 +59,11 @@
                             </c:if>
                         </c:forEach>
 
-                        <c:forEach items="${customerTypeList}" var="customerType">
-                            <c:if test="${customer.idMember!=customerType.idMember}">
-                                <option value="${customerType.customerTypeId}">${customerType.nameMember}</option>
-                            </c:if>
-                        </c:forEach>
+<%--                        <c:forEach items="${customerTypeList}" var="customerType">--%>
+<%--                            <c:if test="${customer.idMember!=customerType.idMember}">--%>
+<%--                                <option value="${customerType.customerTypeId}">${customerType.nameMember}</option>--%>
+<%--                            </c:if>--%>
+<%--                        </c:forEach>--%>
                     </select>
                 </div>
                 <div class="mb-3">
